@@ -26,3 +26,14 @@ INSTALL(TARGETS wc_printer DESTINATION "bin")
 ADD_EXECUTABLE(td_pos_tool td_pos_tool.cpp ../base/TDUserStruct.cpp ../base/TDUserStruct.h)
 TARGET_LINK_LIBRARIES(td_pos_tool journal python ${Boost_LIBRARIES})
 INSTALL(TARGETS td_pos_tool DESTINATION "bin")
+
+
+#MMAPTestReader
+
+ADD_EXECUTABLE(MMAPTestReader MMAPTestReader.cpp MMAPTestReader.h)
+TARGET_LINK_LIBRARIES(MMAPTestReader journal python ${Boost_LIBRARIES})
+INSTALL(TARGETS MMAPTestReader DESTINATION "bin")
+
+ADD_EXECUTABLE(MMAPTestWriter MMAPTestWriter.cpp MMAPTestWriter.h)
+TARGET_LINK_LIBRARIES(MMAPTestWriter journal python ${Boost_LIBRARIES})
+INSTALL(TARGETS MMAPTestWriter DESTINATION "bin")
